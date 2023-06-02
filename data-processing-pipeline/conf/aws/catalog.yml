@@ -1,0 +1,39 @@
+processed_p18_19_5:
+  filepath: s3://processed-data-18042023202303100001/03_processed/processed_p18_19_5.csv
+  type: pandas.CSVDataSet
+
+p18_19_0:
+  filepath: s3://processed-data-18042023202303100001/02_extracted/p18_19_0.csv
+  type: pandas.CSVDataSet
+
+p18_19_1:
+  filepath: s3://processed-data-18042023202303100001/02_extracted/p18_19_1.csv
+  type: pandas.CSVDataSet
+
+p18_19_3:
+  filepath: s3://processed-data-18042023202303100001/02_extracted/p18_19_3.csv
+  type: pandas.CSVDataSet
+
+p18_19_5:
+  filepath: s3://processed-data-18042023202303100001/02_extracted/p18_19_5.csv
+  type: pandas.CSVDataSet
+
+qld_p18_19:
+  filepath: s3://raw-data-20230410093954134000000001/qld-biannual-report-sept-2020-open-data-tables.xlsx
+  load_args:
+    header: null
+    sheet_name: pg 18 and 19 gender
+  save_args:
+    header: null
+    sheet_name: pg 18 and 19 gender
+  type: pandas.ExcelDataSet
+
+qld_all:
+  filepath: s3://raw-data-20230410093954134000000001/qld-biannual-report-sept-2020-open-data-tables.xlsx
+  load_args:
+    header: null
+    sheet_name: ['pg 5 workforce at a glance', 'pg 6 ', 'pg 7 workforce size', 'pg 9 occupation type', 'pg 10 and 11 location', 'pg 12 employment type', 'pg 13 diversity', 'pg 14 workforce earnings', 'pg 15 age', 'pg 16 and 17 appt type', 'pg 18 and 19 gender', 'pg 20  employment status', 'pg 20 appointment type']
+  save_args:
+    header: null
+  type: pandas.ExcelDataSet
+

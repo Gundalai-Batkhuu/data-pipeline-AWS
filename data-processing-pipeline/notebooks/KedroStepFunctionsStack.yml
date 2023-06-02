@@ -1,0 +1,455 @@
+Resources:
+  IntermediateDataBucketF8EEF285:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: intermediate-data-7374046
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/IntermediateDataBucket/Resource
+  extracttablesnodefnServiceRoleA92FA427:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: "2012-10-17"
+      ManagedPolicyArns:
+        - Fn::Join:
+            - ""
+            - - "arn:"
+              - Ref: AWS::Partition
+              - :iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/extract-tables-node-fn/ServiceRole/Resource
+  extracttablesnodefnServiceRoleDefaultPolicy5E303025:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::raw-data-7374046
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::raw-data-7374046/*
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - IntermediateDataBucketF8EEF285
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - IntermediateDataBucketF8EEF285
+                        - Arn
+                    - /*
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::processed-data-7374046
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::processed-data-7374046/*
+        Version: "2012-10-17"
+      PolicyName: extracttablesnodefnServiceRoleDefaultPolicy5E303025
+      Roles:
+        - Ref: extracttablesnodefnServiceRoleA92FA427
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/extract-tables-node-fn/ServiceRole/DefaultPolicy/Resource
+  extracttablesnodefn9C67A7D2:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        ImageUri:
+          Fn::Join:
+            - ""
+            - - Ref: AWS::AccountId
+              - .dkr.ecr.
+              - Ref: AWS::Region
+              - "."
+              - Ref: AWS::URLSuffix
+              - /dpp_step_functions_ecr:latest
+      Role:
+        Fn::GetAtt:
+          - extracttablesnodefnServiceRoleA92FA427
+          - Arn
+      Description: extract_tables_node
+      FunctionName: extract-tables-node
+      MemorySize: 256
+      PackageType: Image
+      ReservedConcurrentExecutions: 10
+      Timeout: 900
+    DependsOn:
+      - extracttablesnodefnServiceRoleDefaultPolicy5E303025
+      - extracttablesnodefnServiceRoleA92FA427
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/extract-tables-node-fn/Resource
+  setcolumnindexnodefnServiceRoleF34C471F:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: "2012-10-17"
+      ManagedPolicyArns:
+        - Fn::Join:
+            - ""
+            - - "arn:"
+              - Ref: AWS::Partition
+              - :iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/set-column-index-node-fn/ServiceRole/Resource
+  setcolumnindexnodefnServiceRoleDefaultPolicy324F578E:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::raw-data-7374046
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::raw-data-7374046/*
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - IntermediateDataBucketF8EEF285
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - IntermediateDataBucketF8EEF285
+                        - Arn
+                    - /*
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::processed-data-7374046
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - :s3:::processed-data-7374046/*
+        Version: "2012-10-17"
+      PolicyName: setcolumnindexnodefnServiceRoleDefaultPolicy324F578E
+      Roles:
+        - Ref: setcolumnindexnodefnServiceRoleF34C471F
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/set-column-index-node-fn/ServiceRole/DefaultPolicy/Resource
+  setcolumnindexnodefn98A50B3E:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        ImageUri:
+          Fn::Join:
+            - ""
+            - - Ref: AWS::AccountId
+              - .dkr.ecr.
+              - Ref: AWS::Region
+              - "."
+              - Ref: AWS::URLSuffix
+              - /dpp_step_functions_ecr:latest
+      Role:
+        Fn::GetAtt:
+          - setcolumnindexnodefnServiceRoleF34C471F
+          - Arn
+      Description: set_column_index_node
+      FunctionName: set-column-index-node
+      MemorySize: 256
+      PackageType: Image
+      ReservedConcurrentExecutions: 10
+      Timeout: 900
+    DependsOn:
+      - setcolumnindexnodefnServiceRoleDefaultPolicy324F578E
+      - setcolumnindexnodefnServiceRoleF34C471F
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/set-column-index-node-fn/Resource
+  dataprocessingpipelineRole6BF6DF54:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+                Fn::FindInMap:
+                  - ServiceprincipalMap
+                  - Ref: AWS::Region
+                  - states
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/data-processing-pipeline/Role/Resource
+  dataprocessingpipelineRoleDefaultPolicy28E61855:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action: lambda:InvokeFunction
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - setcolumnindexnodefn98A50B3E
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - setcolumnindexnodefn98A50B3E
+                        - Arn
+                    - :*
+          - Action: lambda:InvokeFunction
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - extracttablesnodefn9C67A7D2
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - extracttablesnodefn9C67A7D2
+                        - Arn
+                    - :*
+        Version: "2012-10-17"
+      PolicyName: dataprocessingpipelineRoleDefaultPolicy28E61855
+      Roles:
+        - Ref: dataprocessingpipelineRole6BF6DF54
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/data-processing-pipeline/Role/DefaultPolicy/Resource
+  dataprocessingpipeline96B5AFD7:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      RoleArn:
+        Fn::GetAtt:
+          - dataprocessingpipelineRole6BF6DF54
+          - Arn
+      DefinitionString:
+        Fn::Join:
+          - ""
+          - - '{"StartAt":"Start","States":{"Start":{"Type":"Pass","Next":"Group 1"},"Group 1":{"Type":"Parallel","Next":"Group 2","Branches":[{"StartAt":"extract-tables-node","States":{"extract-tables-node":{"End":true,"Retry":[{"ErrorEquals":["Lambda.ServiceException","Lambda.AWSLambdaException","Lambda.SdkClientException"],"IntervalSeconds":2,"MaxAttempts":6,"BackoffRate":2}],"Type":"Task","Resource":"arn:'
+            - Ref: AWS::Partition
+            - :states:::lambda:invoke","Parameters":{"FunctionName":"
+            - Fn::GetAtt:
+                - extracttablesnodefn9C67A7D2
+                - Arn
+            - '","Payload":{"node_name":"extract_tables_node"}}}}}]},"Group 2":{"Type":"Parallel","End":true,"Branches":[{"StartAt":"set-column-index-node","States":{"set-column-index-node":{"End":true,"Retry":[{"ErrorEquals":["Lambda.ServiceException","Lambda.AWSLambdaException","Lambda.SdkClientException"],"IntervalSeconds":2,"MaxAttempts":6,"BackoffRate":2}],"Type":"Task","Resource":"arn:'
+            - Ref: AWS::Partition
+            - :states:::lambda:invoke","Parameters":{"FunctionName":"
+            - Fn::GetAtt:
+                - setcolumnindexnodefn98A50B3E
+                - Arn
+            - '","Payload":{"node_name":"set_column_index_node"}}}}}]}},"TimeoutSeconds":300}'
+    DependsOn:
+      - dataprocessingpipelineRoleDefaultPolicy28E61855
+      - dataprocessingpipelineRole6BF6DF54
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/data-processing-pipeline/Resource
+  CDKMetadata:
+    Type: AWS::CDK::Metadata
+    Properties:
+      Analytics: v2:deflate64:H4sIAAAAAAAA/12O0WrDMAxFv6XvjkoojPVttDAYtBDSL9AcdfXi2MGSO4Lxv692Nhh70rlI91610O6fod284Bc3ehi3SftAkC6CelRH71hC1KKOV9cT+xg0FX4sBiPGuyLOOM/GfWRVMhLpAD3Nno34sByQSfEO0iHqkaTKFYtzpaxYaL5Gp0siQ+qQWXUY0Fqy6vGK0Bn1zbja/VdnZXF6HxDS64+9XPxyVgYnSL231Vhn563RS5Er/StvBHlkONXUN3f3I+WsukVu3m13sIf2afPJxjQhOjETQb/Ob/vq6nhIAQAA
+    Metadata:
+      aws:cdk:path: KedroStepFunctionsStack/CDKMetadata/Default
+    Condition: CDKMetadataAvailable
+Conditions:
+  CDKMetadataAvailable:
+    Fn::Or:
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - af-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ca-central-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-northwest-1
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-central-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-3
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - me-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - sa-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-2
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-2
+Mappings:
+  ServiceprincipalMap:
+    af-south-1:
+      states: states.af-south-1.amazonaws.com
+    ap-east-1:
+      states: states.ap-east-1.amazonaws.com
+    ap-northeast-1:
+      states: states.ap-northeast-1.amazonaws.com
+    ap-northeast-2:
+      states: states.ap-northeast-2.amazonaws.com
+    ap-northeast-3:
+      states: states.ap-northeast-3.amazonaws.com
+    ap-south-1:
+      states: states.ap-south-1.amazonaws.com
+    ap-southeast-1:
+      states: states.ap-southeast-1.amazonaws.com
+    ap-southeast-2:
+      states: states.ap-southeast-2.amazonaws.com
+    ap-southeast-3:
+      states: states.ap-southeast-3.amazonaws.com
+    ca-central-1:
+      states: states.ca-central-1.amazonaws.com
+    cn-north-1:
+      states: states.cn-north-1.amazonaws.com
+    cn-northwest-1:
+      states: states.cn-northwest-1.amazonaws.com
+    eu-central-1:
+      states: states.eu-central-1.amazonaws.com
+    eu-north-1:
+      states: states.eu-north-1.amazonaws.com
+    eu-south-1:
+      states: states.eu-south-1.amazonaws.com
+    eu-south-2:
+      states: states.eu-south-2.amazonaws.com
+    eu-west-1:
+      states: states.eu-west-1.amazonaws.com
+    eu-west-2:
+      states: states.eu-west-2.amazonaws.com
+    eu-west-3:
+      states: states.eu-west-3.amazonaws.com
+    me-south-1:
+      states: states.me-south-1.amazonaws.com
+    sa-east-1:
+      states: states.sa-east-1.amazonaws.com
+    us-east-1:
+      states: states.us-east-1.amazonaws.com
+    us-east-2:
+      states: states.us-east-2.amazonaws.com
+    us-gov-east-1:
+      states: states.us-gov-east-1.amazonaws.com
+    us-gov-west-1:
+      states: states.us-gov-west-1.amazonaws.com
+    us-iso-east-1:
+      states: states.amazonaws.com
+    us-iso-west-1:
+      states: states.amazonaws.com
+    us-isob-east-1:
+      states: states.amazonaws.com
+    us-west-1:
+      states: states.us-west-1.amazonaws.com
+    us-west-2:
+      states: states.us-west-2.amazonaws.com

@@ -1,0 +1,17 @@
+black~=22.0
+flake8>=3.7.9, <4.0
+ipython>=7.31.1, <8.0
+isort~=5.0
+jupyter~=1.0
+jupyterlab~=3.0
+kedro[pandas.CSVDataSet, pandas.ExcelDataSet] @ git+https://github.com/kedro-org/kedro@main
+kedro-viz~=4.0; python_version < '3.9'
+nbstripout~=0.4
+pytest-cov~=3.0
+pytest-mock>=1.7.1, <2.0
+pytest~=6.2
+s3fs>=0.3.0,<0.5
+kedro @ git+https://github.com/kedro-org/kedro@main
+great-expectations
+
+

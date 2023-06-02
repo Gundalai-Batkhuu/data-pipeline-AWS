@@ -1,0 +1,296 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "KedroStepFunctionsStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "KedroStepFunctionsStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/KedroStepFunctionsStack/IntermediateDataBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IntermediateDataBucketF8EEF285",
+            "trace": [
+              "new Bucket (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:666:26)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/extract-tables-node-fn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "extracttablesnodefnServiceRoleA92FA427",
+            "trace": [
+              "new Role (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:63:22)",
+              "new Function (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:35)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/extract-tables-node-fn/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "extracttablesnodefnServiceRoleDefaultPolicy5E303025",
+            "trace": [
+              "new Policy (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:57:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:247:34)",
+              "Function.addToPrincipal (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:102:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:50:30)",
+              "Import.grant (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:487:31)",
+              "Import.grantReadWrite (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:335:21)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:105",
+              "Kernel._ensureSync (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:10358:28)",
+              "Kernel.invoke (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:34)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/extract-tables-node-fn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "extracttablesnodefn9C67A7D2",
+            "trace": [
+              "new Function (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:172:26)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/set-column-index-node-fn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "setcolumnindexnodefnServiceRoleF34C471F",
+            "trace": [
+              "new Role (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:63:22)",
+              "new Function (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:35)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/set-column-index-node-fn/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "setcolumnindexnodefnServiceRoleDefaultPolicy324F578E",
+            "trace": [
+              "new Policy (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:57:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:247:34)",
+              "Function.addToPrincipal (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:102:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:50:30)",
+              "Import.grant (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:487:31)",
+              "Import.grantReadWrite (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:335:21)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:105",
+              "Kernel._ensureSync (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:10358:28)",
+              "Kernel.invoke (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:34)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/set-column-index-node-fn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "setcolumnindexnodefn98A50B3E",
+            "trace": [
+              "new Function (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:172:26)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/data-processing-pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dataprocessingpipelineRole6BF6DF54",
+            "trace": [
+              "new Role (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:63:22)",
+              "new StateMachine (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:273:35)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/data-processing-pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dataprocessingpipelineRoleDefaultPolicy28E61855",
+            "trace": [
+              "new Policy (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:57:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:247:34)",
+              "StateMachine.addToRolePolicy (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:309:19)",
+              "new StateMachine (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:289:18)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/data-processing-pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dataprocessingpipeline96B5AFD7",
+            "trace": [
+              "new StateMachine (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:279:26)",
+              "Kernel._create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9964:29)",
+              "Kernel.create (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9693:29)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:22:30)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:139:9",
+              "visit (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:200:9)",
+              "visit (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:197:9)",
+              "injectMetadataResources (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:5)",
+              "Object.synthesize (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\stage.js:104:41)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:105",
+              "Kernel._ensureSync (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:10358:28)",
+              "Kernel.invoke (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:34)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:30:35)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:139:9",
+              "visit (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:200:9)",
+              "visit (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:197:9)",
+              "injectMetadataResources (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:5)",
+              "Object.synthesize (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\stage.js:104:41)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:105",
+              "Kernel._ensureSync (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:10358:28)",
+              "Kernel.invoke (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:34)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/KedroStepFunctionsStack/Service-principalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap",
+            "trace": [
+              "Object.deployTimeLookup (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\region-lookup.js:35:19)",
+              "Stack.regionalFact (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\stack.js:638:32)",
+              "ServicePrincipalToken.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\aws-iam\\lib\\principals.js:850:22)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\resolvable.js:64:30)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:198:22)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:131:55)",
+              "Object.resolve [as mapToken] (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "TokenizedStringFragments.mapTokens (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\string-fragments.js:78:43)",
+              "RememberingTokenResolver.resolveString (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\resolvable.js:93:26)",
+              "RememberingTokenResolver.resolveString (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:201:27)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:98:54)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:146:51)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:146:51)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:122:51",
+              "Array.map (<anonymous>)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:122:14)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:146:51)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:198:22)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:131:55)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:146:51)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:198:22)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:131:55)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:146:51)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:198:22)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:131:55)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:146:51)",
+              "Object.resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:58:48)",
+              "resolve (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:146:51)",
+              "Object.findTokens (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\resolve.js:184:5)",
+              "findAllReferences (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\refs.js:97:38)",
+              "Object.resolveReferences (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\refs.js:20:19)",
+              "Object.prepareApp (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\prepare-app.js:30:12)",
+              "Object.synthesize (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:21:19)",
+              "App.synth (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\jsii-kernel-BEoQE7\\node_modules\\@aws-cdk\\core\\lib\\stage.js:104:41)",
+              "C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:105",
+              "Kernel._ensureSync (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:10358:28)",
+              "Kernel.invoke (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:9769:34)",
+              "KernelHost.processRequest (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11544:36)",
+              "KernelHost.run (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11504:22)",
+              "Immediate._onImmediate (C:\\Users\\gdbt0\\AppData\\Local\\Temp\\tmpx6996jgu\\lib\\program.js:11505:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "KedroStepFunctionsStack"
+    }
+  }
+}

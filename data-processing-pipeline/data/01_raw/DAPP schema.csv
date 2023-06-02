@@ -1,0 +1,13 @@
+Field Name,Specific requirements,
+Department,Title cased,Full name of department (i.e. no abbreviations)
+Workforce under 20,Percentage,
+Workforce between 20-30,Percentage,
+Workforce between 30-40,Percentage,
+Workforce between 40-50,Percentage,
+Workforce between 50-65,Percentage,
+Workforce over 65,Percentage,
+Male,Percentage,
+Female,Percentage,
+Average Salary,,
+Total employees,,
+Percent of Public service,The employees in the department vs total public service count,

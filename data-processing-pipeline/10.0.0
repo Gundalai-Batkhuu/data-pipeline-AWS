@@ -1,0 +1,20 @@
+Requirement already satisfied: constructs in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (3.4.293)
+Collecting constructs
+  Using cached constructs-10.2.1-py3-none-any.whl (58 kB)
+Requirement already satisfied: jsii<2.0.0,>=1.80.0 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from constructs) (1.80.0)
+Requirement already satisfied: publication>=0.0.3 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from constructs) (0.0.3)
+Requirement already satisfied: typeguard~=2.13.3 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from constructs) (2.13.3)
+Requirement already satisfied: attrs<23.0,>=21.2 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from jsii<2.0.0,>=1.80.0->constructs) (21.4.0)
+Requirement already satisfied: cattrs<22.3,>=1.8 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from jsii<2.0.0,>=1.80.0->constructs) (22.2.0)
+Requirement already satisfied: importlib-resources>=5.2.0 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from jsii<2.0.0,>=1.80.0->constructs) (5.2.0)
+Requirement already satisfied: python-dateutil in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from jsii<2.0.0,>=1.80.0->constructs) (2.8.2)
+Requirement already satisfied: typing-extensions<5.0,>=3.7 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from jsii<2.0.0,>=1.80.0->constructs) (4.3.0)
+Requirement already satisfied: exceptiongroup in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from cattrs<22.3,>=1.8->jsii<2.0.0,>=1.80.0->constructs) (1.1.1)
+Requirement already satisfied: zipp>=3.1.0 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from importlib-resources>=5.2.0->jsii<2.0.0,>=1.80.0->constructs) (3.8.0)
+Requirement already satisfied: six>=1.5 in c:\users\gdbt0\anaconda3\envs\kedro-environment\lib\site-packages (from python-dateutil->jsii<2.0.0,>=1.80.0->constructs) (1.16.0)
+Installing collected packages: constructs
+  Attempting uninstall: constructs
+    Found existing installation: constructs 3.4.293
+    Uninstalling constructs-3.4.293:
+      Successfully uninstalled constructs-3.4.293
+Successfully installed constructs-10.2.1
