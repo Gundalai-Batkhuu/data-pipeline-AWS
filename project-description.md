@@ -116,7 +116,7 @@ For more details on how to use Kedro, see ./data-processing-pipeline/README.md
 
 # Data pipeline with AWS Lambda orchestrated by AWS Step Functions
 
-This pattern creates a data pipeline with AWS Lambda orchestrated by AWS Step Functions. The pipeline is triggered by an Amazon S3 event. The Lambda function is invoked by the Step Functions state machine. The Lambda function reads the data from the source Amazon S3 bucket, processes it, and writes the result to respective destinations in Amazon S3 buckets.
+This pipeline creates a data pipeline with AWS Lambda orchestrated by AWS Step Functions. The pipeline is triggered by an Amazon S3 event. The Lambda function is invoked by the Step Functions state machine. The Lambda function reads the data from the source Amazon S3 bucket, processes it, and writes the result to respective destinations in Amazon S3 buckets.
 
 ## Modules
 
