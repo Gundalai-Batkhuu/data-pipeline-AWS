@@ -107,7 +107,7 @@ This pattern uses the below Terraform modules
 
 # Building the data pipeline with Kedro
 
-Kedro is a Python framework that applies software engineering best-practice to data and machine learning pipelines. Kedro is used to build the data pipeline.
+Kedro is a Python framework that applies software engineering best-practices to data and machine learning pipelines. Kedro is used to build the data pipeline.
 
 ./data-processing-pipeline - This directory contains the Kedro project.
 
