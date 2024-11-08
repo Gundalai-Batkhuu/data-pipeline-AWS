@@ -105,7 +105,7 @@ This pattern uses the following Terraform modules
 - [AWS CodePipeline Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/create-a-ci-cd-pipeline-to-validate-terraform-configurations-by-using-aws-codepipeline.html)
 
 
-# Building the data pipeline with Kedro
+# Building the data pipeline with Kedro framework
 
 Kedro is a Python framework that applies software engineering best-practices to data and machine learning pipelines. Kedro is used to build the data pipeline.
 
