@@ -83,7 +83,7 @@ Running these three stages ensures the integrity of terraform configurations.
 
 Terraform modules are self-contained packages of Terraform configurations that are managed as a group.
 
-This pattern uses the below Terraform modules
+This pattern uses the following Terraform modules
 
 - [codepipeline](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codepipeline) - This module creates a CodePipeline with CodeCommit as source, CodeBuild as build provider and CodeDeploy as deploy provider.
 - [codebuild](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codebuild_project) - This module creates a CodeBuild project with terraform, tfsec and checkov as buildspec.
