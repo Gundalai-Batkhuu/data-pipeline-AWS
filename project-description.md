@@ -1,3 +1,10 @@
+---
+title: "Data preparation pipeline hosted on AWS"
+publishedAt: "2024-11-08"
+summary: "A data preparation pipeline hosted on AWS using Kedro framework."
+tags: "AWS, Data engineering"
+---
+
 # Data preparation pipeline hosted on AWS
 
 This is a computing internship project of Gundalai Batkhuu during the ANU Semester 1 2023 hosted by Shine Solutions Group.
