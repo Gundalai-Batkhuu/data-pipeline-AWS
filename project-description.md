@@ -21,7 +21,7 @@ This is a computing internship project of Gundalai Batkhuu during the ANU Semest
 
 # About the project
 
-This project allows to create a modular, reproducible and maintainable data pipeline using Python's Kedro framework powered by the AWS's computing and storage resources. The data transformations are processed by AWS Lambda functions orchestrated by an AWS Step Functions state machine. The pipeline is triggered by an AWS Lambda function that is invoked by an AWS S3 bucket when a new file is uploaded to the bucket. The pipeline is deployed using Terraform via a CI/CD pipeline that validates the infrastructure's configurations. The pipeline is built using AWS CodePipeline and AWS CodeBuild. The processed data is uploaded to an AWS RDS PostgreSQL database by an AWS Lambda function.
+This project allows creating a modular, reproducible and maintainable data pipeline using Python's Kedro framework powered by the AWS's computing and storage resources. The data transformations are processed by AWS Lambda functions orchestrated by an AWS Step Functions state machine. The pipeline is triggered by an AWS Lambda function that is invoked by an AWS S3 bucket when a new file is uploaded to the bucket. The pipeline is deployed using Terraform via a CI/CD pipeline that validates the infrastructure's configurations. The pipeline is built using AWS CodePipeline and AWS CodeBuild. The processed data is uploaded to an AWS RDS PostgreSQL database by an AWS Lambda function.
 
 # How to use
 
