@@ -1,13 +1,13 @@
 ---
 title: "Data preparation pipeline hosted on AWS"
-publishedAt: "2024-11-08"
+publishedAt: "2023-06-08"
 summary: "A data preparation pipeline hosted on AWS using Kedro framework."
 tags: "AWS, Data engineering"
 ---
 
 # Data preparation pipeline hosted on AWS
 
-This is a computing internship project of Gundalai Batkhuu during the ANU Semester 1 2023 hosted by Shine Solutions Group.
+This is my project completed during my software engineering internship hosted by Shine Solutions Group in Canberra in 2023.
 
 # Table of contents
 
@@ -30,7 +30,12 @@ This is a computing internship project of Gundalai Batkhuu during the ANU Semest
 
 This project allows creating a modular, reproducible and maintainable data pipeline using Python's Kedro framework powered by the AWS's computing and storage resources. Data transformations are processed by AWS Lambda functions orchestrated by an AWS Step Functions state machine. The pipeline is triggered by an AWS Lambda function that is invoked by an AWS S3 bucket when a new file is uploaded to the bucket. The pipeline is deployed using Terraform via a CI/CD pipeline that validates the infrastructure's configurations. The pipeline is built using AWS CodePipeline and AWS CodeBuild. The processed data is uploaded to an AWS RDS PostgreSQL database by an AWS Lambda function.
 
+# Architecture Diagram
+
+![Architecture Diagram](https://my-portfolio-public-files.s3.ap-southeast-2.amazonaws.com/shine-internship-architecture_diagram.drawio.svg)
+
 # How to use
+
 
 1. Prepare a compatible Kedro DataCatalog with the AWS S3 bucket data sources and data sets required for the pipeline.
 
