@@ -30,6 +30,10 @@ This is my project completed during my software engineering internship hosted by
 
 This project allows creating a modular, reproducible and maintainable data pipeline using Python's Kedro framework powered by the AWS's computing and storage resources. Data transformations are processed by AWS Lambda functions orchestrated by an AWS Step Functions state machine. The pipeline is triggered by an AWS Lambda function that is invoked by an AWS S3 bucket when a new file is uploaded to the bucket. The pipeline is deployed using Terraform via a CI/CD pipeline that validates the infrastructure's configurations. The pipeline is built using AWS CodePipeline and AWS CodeBuild. The processed data is uploaded to an AWS RDS PostgreSQL database by an AWS Lambda function.
 
+# Project Poster
+
+![Project Poster](https://my-portfolio-public-files.s3.ap-southeast-2.amazonaws.com/shine_internship_poster.pdf)
+
 # Architecture Diagram
 
 ![Architecture Diagram](https://my-portfolio-public-files.s3.ap-southeast-2.amazonaws.com/shine-internship-architecture_diagram.drawio.svg)
