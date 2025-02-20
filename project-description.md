@@ -5,30 +5,7 @@ summary: "A data preparation pipeline hosted on AWS using Kedro framework."
 tags: "AWS, Data engineering"
 ---
 
-# Data preparation pipeline hosted on AWS
-
-This is my project completed during my software engineering internship hosted by Shine Solutions Group in Canberra in 2023.
-
-# Table of contents
-
-- [About the project](#about-the-project)
-- [How to use](#how-to-use)
-- [AWS CodePipeline CI/CD pipeline for Terraform](#aws-codepipeline-ci/cd-pipeline-for-terraform)
-    - [Modules](#modules)
-    - [CodeBuild specifications](#codebuild-specifications)
-    - [Resources](#resources)
-- [Building the data pipeline with Kedro](#building-the-data-pipeline-with-kedro)
-- [Data pipeline with AWS Lambda orchestrated by AWS Step Functions](#data-pipeline-with-aws-lambda-orchestrated-by-aws-step-functions)
-    - [Modules](#modules-1)
-    - [Resources](#resources-1)
-- [Uploading processed data to AWS RDS PostgreSQL database](#uploading-processed-data-to-aws-rds-postgresql-database)
-    - [Modules](#modules-2)
-- [Potential Improvements](#potential-improvements)
-
-
-# About the project
-
-This project allows creating a modular, reproducible and maintainable data pipeline using Python's Kedro framework powered by the AWS's computing and storage resources. Data transformations are processed by AWS Lambda functions orchestrated by an AWS Step Functions state machine. The pipeline is triggered by an AWS Lambda function that is invoked by an AWS S3 bucket when a new file is uploaded to the bucket. The pipeline is deployed using Terraform via a CI/CD pipeline that validates the infrastructure's configurations. The pipeline is built using AWS CodePipeline and AWS CodeBuild. The processed data is uploaded to an AWS RDS PostgreSQL database by an AWS Lambda function.
+This is my project completed during my software engineering internship hosted by Shine Solutions Group in Canberra in 2023. This project allows creating a modular, reproducible and maintainable data pipeline using Python's Kedro framework powered by the AWS's computing and storage resources. Data transformations are processed by AWS Lambda functions orchestrated by an AWS Step Functions state machine. The pipeline is triggered by an AWS Lambda function that is invoked by an AWS S3 bucket when a new file is uploaded to the bucket. The pipeline is deployed using Terraform via a CI/CD pipeline that validates the infrastructure's configurations. The pipeline is built using AWS CodePipeline and AWS CodeBuild. The processed data is uploaded to an AWS RDS PostgreSQL database by an AWS Lambda function.
 
 # Project Poster
 
